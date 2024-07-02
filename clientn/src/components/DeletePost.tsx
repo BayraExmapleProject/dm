@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import Spinner from "./Spinner";
 
@@ -10,9 +10,12 @@ const DeletePost = ({ e }: { e: number }) => {
   async function handleDelete(id: number) {
     setLoading(true);
     try {
-      const res = await fetch("http://127.0.0.1:8000/items/" + id, {
-        method: "DELETE",
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/items/` + id,
+        {
+          method: "DELETE",
+        }
+      );
 
       if (res.ok) router.refresh();
     } catch (error) {
