@@ -34,6 +34,7 @@ const CreateName = () => {
       <form onSubmit={onSubmitHandler} className="">
         <input
           type="text"
+          required
           placeholder="Enter Your Name"
           className="px-3 py-2 rounded-md outline outline-none border my-2 w-full"
           onChange={(e) => setName(e.target.value)}

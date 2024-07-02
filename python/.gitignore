@@ -1,0 +1,6 @@
+
+/tmp_env
+/venv
+
+__pycache__
+.zshrc
