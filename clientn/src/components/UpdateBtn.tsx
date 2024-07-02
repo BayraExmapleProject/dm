@@ -2,17 +2,7 @@
 import React, { useState } from "react";
 import UpdatePost from "./UpdatePost";
 
-const UpdateBtn = ({
-  id,
-  name,
-  email,
-  comment,
-}: {
-  id: number;
-  name: string;
-  email: string;
-  comment: string;
-}) => {
+const UpdateBtn = ({ id, name }: { id: number; name: string }) => {
   const [update, setUpdate] = useState(false);
 
   return (
@@ -23,13 +13,7 @@ const UpdateBtn = ({
       >
         {update ? <p>Close</p> : <p>Update</p>}
       </button>
-      <UpdatePost
-        id={id}
-        name={name}
-        email={email}
-        comment={comment}
-        update={update}
-      />
+      <UpdatePost id={id} name={name} update={update} />
     </div>
   );
 };

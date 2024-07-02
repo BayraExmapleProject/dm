@@ -23,19 +23,9 @@ const Name = async () => {
                   <p className="py-2 px-3 font-bold capitalize">{e.name}</p>
                 </Link>
                 <DeletePost e={e.id} />
-                <UpdateBtn
-                  id={e.id}
-                  name={e.name}
-                  email={e.email}
-                  comment={e.comment}
-                />
+                <UpdateBtn id={e.id} name={e.name} />
                 <div>
-                  <UpdatePost
-                    id={e.id}
-                    name={e.name}
-                    email={e.email}
-                    comment={e.comment}
-                  />
+                  <UpdatePost id={e.id} name={e.name} />
                 </div>
               </div>
             </div>

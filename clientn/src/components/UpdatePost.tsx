@@ -6,22 +6,18 @@ import Spinner from "./Spinner";
 const UpdatePost = ({
   id,
   name,
-  email,
-  comment,
+
   update,
 }: {
   id: number;
   name: string;
-  email: string;
-  comment: string;
+
   update?: boolean | any;
 }) => {
   const [newName, setName] = useState(name);
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
-  const [newEmail, setEmail] = useState(email);
-  const [newComment, setComment] = useState(comment);
   const onSubmitHandler = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
