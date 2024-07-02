@@ -1,0 +1,2 @@
+set API_KEY=your_api_key
+set DB_PASSWORD=your_db_password
