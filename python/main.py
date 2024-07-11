@@ -10,7 +10,7 @@ app = FastAPI()
  #allow to connect to frontend
 app.add_middleware(
  CORSMiddleware,
- allow_origins=["http://localhost:3000"], # Add your frontend origin here
+ allow_origins=["http://localhost:3000", "https://dm-r6lp.vercel.app/"], # Add your frontend origin here
  allow_credentials=True,
  allow_methods=["*"],
  allow_headers=["*"],
